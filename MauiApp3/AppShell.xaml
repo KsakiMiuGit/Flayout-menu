@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp3.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp3"
+    Shell.FlyoutBehavior="Flyout">
+
+    <Shell.FlyoutHeader>
+        <Label Text="Przelicznik:" FontSize="30" />
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Długość"
+                Icon="ulica.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:Dlugosci}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Prędkość"
+                Icon="predkosc.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:Predkosc}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Waluty"
+                Icon="waluty.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:Waluty}" />
+        </Tab>
+    </FlyoutItem>
+    <Shell.FlyoutFooter>
+        <Label Text="  Informacje" FontSize="15" />
+    </Shell.FlyoutFooter>
+
+</Shell>

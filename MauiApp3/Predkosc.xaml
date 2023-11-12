@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.Predkosc"
+             Title="Przelicznik prędkości">
+
+    <StackLayout>
+        <Label Text="Podaj prędkość:" Margin="20,0,0,0"/>
+        <Entry x:Name="SpeedEntry" Placeholder="Wprowadź prędkość" Keyboard="Numeric" Margin="20,0,100,0"/>
+
+        <Label Text="Z:" Margin="20,20,0,0"/>
+        <Picker x:Name="SourceUnitPicker" Margin="20,0,100,0">
+            <Picker.Items>
+                <x:String>Kilometry na godzinę (km/h)</x:String>
+                <x:String>Metry na godzinę (m/h)</x:String>
+                <x:String>Kilometry na sekundę (km/s)</x:String>
+                <x:String>Metry na sekundę (m/s)</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Na:" Margin="20,0,0,0"/>
+        <Picker x:Name="TargetUnitPicker" Margin="20,0,100,0">
+            <Picker.Items>
+                <x:String>Kilometry na godzinę (km/h)</x:String>
+                <x:String>Metry na godzinę (m/h)</x:String>
+                <x:String>Kilometry na sekundę (km/s)</x:String>
+                <x:String>Metry na sekundę (m/s)</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Przelicz" Clicked="OnConvertButtonClicked" Margin="20,20,100,0"/>
+
+        <Label Text="Przeliczona prędkość:" Margin="20,20,0,0"/>
+        <Label x:Name="ResultLabel" Margin="20,0,0,0"/>
+    </StackLayout>
+</ContentPage>
